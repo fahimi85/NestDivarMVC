@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <h1> {{category}} Shop</h1>
+    <h2>you can campare and then choose the best</h2>
+    <div3><label for="Category">Please Choose Your Category and enter in the url:</label>
+        <select name="Category" id="Category" onchange="document.location.href = '/post/' + this.value">
+            {{#each listselect }}
+            <option>{{this}}</option>
+            {{/each}}
+        </select><br><br>
+    </div3>
+    <div6 style="
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;">
+        <div30 style="
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;">
+            <div130 style="
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: right;">
+                <div30111 style="
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;"><label> price between {{minprice}}-{{charak1}}</label>
+                    <div3011 style="
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;">
+                        <div301
+                            style="border: 1px solid #FB4805;background-color: #E56997;margin:5px;border-radius: 2px;color:white;width:{{percentFistScope}}px;height: 30px;font-size:20px;direction: rtl;display: flex;flex-wrap: wrap;flex-direction: row;justify-content:center;">
+                        </div301><label>
+                            <h3>{{percentFistScope}}%</h3>
+                        </label>
+                    </div3011>
+                </div30111>
+                <div30222 style="
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;"><label> price between {{charak1}}-{{charak2}}</label>
+                    <div3022 style="
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;">
+                        <div302
+                            style="border: 1px solid #FB4805;background-color: #BD97CB;margin:5px;border-width:1px ;border-radius: 2px;color:white;width:{{percentSecondeScope}}px;height: 30px;font-size:20px;direction: rtl;display: flex;flex-wrap: wrap;flex-direction: row;justify-content:center;">
+                        </div302><label>
+                            <h3>{{percentSecondeScope}}</h3>
+                        </label>
+                    </div3022>
+                </div30222>
+                <div30333 style="
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;"><label> price between {{charak2}}-{{charak3}}</label>
+                    <div3033 style="
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;">
+                        <div303
+                            style="border: 1px solid #FB4805;background-color: #FFD700;margin:5px;border-width:1px ;border-radius: 2px;color:white;width:{{percentThiredScope}}px;height: 30px;font-size:20px;direction: rtl;display: flex;flex-wrap: wrap;flex-direction: row;justify-content:center;">
+                        </div303><label>
+                            <h3>{{percentThiredScope}}</h3>
+                        </label>
+                    </div3033>
+                </div30333>
+                <div30444 style="
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;"><label> price between {{charak3}}-{{maxprice}}</label>
+                    <div3044 style="
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: left;">
+                        <div304
+                            style="border: 1px solid #FB4805;background-color: #66D2D6;margin:5px;border-width:1px ;border-radius: 2px;color:white;width:{{percentFourthScope}}px;height: 30px;font-size:20px;direction: rtl;display: flex;flex-wrap: wrap;flex-direction: row;justify-content:center;">
+                        </div304><label>
+                            <h3>{{percentFourthScope}}</h3>
+                        </label>
+                    </div3044>
+                </div30444>
+            </div130>
+            <div140>
+                <div20
+                    style="text-align:center;margin-bottom: 30px;border: 1px solid #fff;background:rgb(235, 197, 100)">
+                    <h2>تحلیل بازار</h2>
+                </div20>
+                <div21 style="text-align:center;">
+                    <h3>میانگین قیمت:{{EnToFaAve}} تومان</h3>
+                </div21>
+                <div25 style="text-align:center;">
+                    <h3>بالا ترین قیمت:{{EnToFaMax}} تومان</h3>
+                </div25>
+                <div26 style="text-align:center;">
+                    <h3>پایین ترین قیمت:${{EnToFaMin}} تومان</h3>
+                </div26>
+            </div140>
+        </div30>
+        <div120 style="
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;">
+            <div4 style="
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;">
+                {{#each carlist }}
+                <div7
+                    style="border: 1px solid #FB4805;background-color: #FF5733; margin: 6px;border-width:3px ;border-radius: 20px;color:white;width:25%;font-size:20px;direction: rtl;display: flex;flex-wrap: wrap;flex-direction: row;justify-content:center;">
+                    <div8 style="display: flex;flex-wrap: wrap;flex-direction: column;">
+                        <div>{{this.title}}</div>
+                        <div>{{this.price}}</div>
+                        <div>{{this.kilometer}}</div>
+                    </div8>
+                    <img style="border-radius: 15px;" src={{this.image}}>
+                </div7>
+                {{/each}}
+            </div4>
+            <div5>
+                <form action="#" class="form" style="flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width:250px">
+                    <div class="lable" style="text-align: right;margin-bottom: 30px">
+                        <label>نام کاربری</label><br>
+                        <input type="text" class="form_control" required style="width: 200px;
+        border: 1px solid #fff;
+        background-color: rgb(240, 240, 240);
+        border-color:rgb(207, 207, 207) ;
+        height: 55px;">
+                    </div>
+                    <div class="lable" style="text-align: right;margin-bottom: 30px">
+                        <label>پسورد</label><br>
+                        <input type="text" class="form_control" required style="width:200px;
+        border: 1px solid #fff;
+        background-color: rgb(240, 240, 240);
+        border-color:rgb(207, 207, 207) ;
+        height: 55px;">
+                    </div>
+
+
+                    <div class="lable" style="text-align: right;margin-bottom: 30px;">
+                        <input type="submit" class="button_controll"
+                            style="border: 1px solid #fff;background:rgb(235, 197, 100) ;color: rgb(255, 255, 255) ;border-color: rgb(235, 197, 100);padding: 1px;height: 60px;font-size: 21px;line-height: 60px;width: 120px;"
+                            value="ارسال">
+                    </div>
+                </form>
+            </div5>
+        </div120>
+    </div6>
+</body>
+
+</html>
